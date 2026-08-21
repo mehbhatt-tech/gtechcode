@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ... rest of schema remains same ...
+model Organization {
+  id        String   @id @default(uuid())
+  name      String
+  users     User[]
+  contacts  Contact[]
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id             String       @id @default(uuid())
+  email          String       @unique
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+}
+
+model Contact {
+  id             String       @id @default(uuid())
+  firstName      String?
+  lastName       String?
+  phone          String
+  email          String?
+  status         String       @default("NEW")
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  interactions   Interaction[]
+}
+
+model Interaction {
+  id        String   @id @default(uuid())
+  contactId String
+  contact   Contact  @relation(fields: [contactId], references: [id])
+  type      String   // CALL, SMS, EMAIL
+  content   String?
+  timestamp DateTime @default(now())
+}

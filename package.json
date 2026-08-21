@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@klingai/cli-global": "^0.1.3"
+  }
+}
