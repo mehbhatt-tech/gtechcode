@@ -1,4 +1,4 @@
-# MVP Plan: AI-CRM & Communications Platform
+# MVP Plan: gtechcode (AI-CRM & Communications Platform)
 
 ## Phase 1: Communication Infrastructure (AI Calling Agent)
 - Integrate Twilio (Voice/SMS API) or Vapi.ai (specifically for AI voice agents).

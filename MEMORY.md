@@ -1,4 +1,4 @@
-# Project: Roko Clone (AI-CRM & Automation Platform)
+# Project: gtechcode (AI-CRM & Automation Platform)
 
 ## Brainstorming & Feature Roadmap (Approved by Mr M)
 - **Philosophy:** Always brainstorm the latest market features and unique capabilities before building.
