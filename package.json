@@ -1,5 +1,19 @@
 {
+  "name": "gtechcode",
+  "version": "1.0.0",
+  "description": "AI-CRM & Automation Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "tsc",
+    "seed": "ts-node prisma/seed.ts"
+  },
   "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "fastify": "^4.20.0",
+    "prisma": "^5.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
     "@klingai/cli-global": "^0.1.3"
   }
 }
